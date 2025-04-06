@@ -1,0 +1,50 @@
+Git Komutları Notları
+Temel Komutlar
+ls: Klasörleri listeler.
+clear: Terminali temizler.
+pwd: Bulunan konumu gösterir.
+mkdir: Yeni klasör oluşturur.
+rm: Dosya siler.
+rm -rf: Klasör siler.
+cd: Belirli klasöre gider.
+cd ..: Önceki klasöre gider.
+Git Temelleri
+git init: Git bağlantısı yapar. Not: Aynı klasörde 2 defa çalıştırılmamalı, önce git status ile kontrol edilmeli.
+git status: Güncel git durumunu gösterir.
+git add: Dosyayı git populasyonuna dahil eder.
+git add .: Tüm değişiklikleri ekler.
+git commit -m "mesaj": Git populasyonundaki dosyaları commit eder ve mesaj ekler.
+git log: Git aktivitelerini gösterir.
+.gitignore: Gizlenmesi istenen dosyaların adını yazarak yüklenmesini engeller.
+Branch Yönetimi
+git branch: Yeni branch oluşturur veya branch listesini döndürür.
+git switch branch_name: Branchler arasında geçiş yapar.
+git merge branch_name: Branchleri birleştirir.
+HEAD -> master: Hangi branchte olduğumuzu gösterir.
+master: Ana branch olarak kullanılır. Tüm değişiklikler en son master branch'e dahil edilir.
+Değişiklik Yönetimi
+git diff: Commitler arasındaki değişiklikleri gösterir. Not: Sadece add yapılmamış değişiklikleri gösterir.
+git diff commit_id_1 commit_id_2: İki commit arasındaki farkları gösterir.
+git diff branch_name_1 branch_name_2: İki branch arasındaki farkları gösterir.
+git restore dosya_adi: Dosyayı önceki sürüme döndürür.
+git stash: Değişiklikleri geçici olarak saklar.
+git stash pop: Stash'ı siler ve uygular.
+git stash list: Stash listesini gösterir.
+git stash apply: Stash'ı uygular.
+git stash clear: Stash listesini temizler.
+Commit Yönetimi
+git checkout commit_id: Eski bir commit'e geçiş yapar.
+git reset commit_id: Commitleri siler, içerikler kalır ve geriye döner.
+git reset --hard commit_id: Commitleri ve içerikleri siler, geriye döner.
+git revert commit_id: Geri alma işlemini yeni bir commit olarak ekler.
+Remote İşlemleri
+git remote add origin repo_url: Github reposuna bağlantı ekler.
+git push -u origin branch_name: Dosyaları Github reposuna yükler.
+git fetch: Değişiklik olup olmadığını kontrol eder.
+git pull: Fetch gibi değişiklikleri alır ve merge işlemini otomatik yapar.
+git clone repo_url: Github reposunu cihaza klonlar. Not: Klonlanan dosya push edilemez, sadece fetch yapılabilir.
+Diğer Önemli Kavramlar
+Fast Forwarding: Yeni branch'te değişiklik yapıp ana branch'te yapmamak ve sonra merge yapmak.
+Rebase: Karmaşık merge commitlerini sıralar. Örneğin, bir branch'teki tüm commitler sıralanır, ardından diğer branch'teki commitler gelir.
+Fork: Github'da bir repoyu klonlar ve değişiklik yapılmasını sağlar.
+Private Repo: Paylaşılan kişi klonladıktan sonra push yapabilir.
